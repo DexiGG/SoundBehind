@@ -1,0 +1,66 @@
+﻿<Window x:Class="HomeWork.MainWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HomeWork"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        <Label Content="Игра престолов 8 сезон." HorizontalAlignment="Center" Margin="276,197,303,0" VerticalAlignment="Top" Width="213" FontWeight="Bold" FontSize="16"/>
+        <RichTextBox Margin="2,255,0,0" HorizontalAlignment="Center" Name="targetPrint">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Последний сезон Игры Престолов начинается в "/>
+                    <InlineUIContainer>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Path=Text, ElementName=NorthCityName, Mode=TwoWay}"/>
+                    </InlineUIContainer>
+                    <Run Text=" , куда пребвают"/>
+                    <InlineUIContainer>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Path=Text, ElementName=TargarianName, Mode=TwoWay}"/>
+                    </InlineUIContainer>
+                    <Run Text=" и ее воины, готовые захватить"/>
+                    <InlineUIContainer>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Path=Text, ElementName=NameOfThrone, Mode=TwoWay}"/>
+                    </InlineUIContainer>
+                    <Run Text=" . С Севера надвигается Армия мертвых, возглавляемая"/>
+                    <InlineUIContainer>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Path=Text, ElementName=KinghName, Mode=TwoWay}"/>
+                    </InlineUIContainer>
+                    <Run Text=" и ледянным воскресшим драконом. Если люди не найдут возможности объедениться, то на землю опуститься вечная"/>
+                    <InlineUIContainer>
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Path=Text, ElementName=WeatherName, Mode=TwoWay}"/>
+                    </InlineUIContainer>
+                    <Run Text=" Серсея, восседающая в столице Вестероса, в текущей обстановке чувствует себя уверенней многих: ее ждет хорошее подкрепление в лице Золотых Мечей — отряда наемников из Эссоса, куда входят рыцари и бывшие лорды. Мечи считаются самым сильным и прославленным отрядом, действующим на территории Вольных Городов, а командует ими Гарри Стрикленд, по прозвищу Бездомный Гарри
+
+Арья Старк тренировалась в храме Многоликого, бога смерти, чтобы стать идеальной убийцей, способной легко менять внешность и проникать куда угодно. В седьмом сезоне они с Сансой наконец-то воссоединились в Винтерфелле. В финале сестры будут работать вместе, иногда против Джона, как заверила Мэйси Уильямс. Кроме того, теперь Арья является обладательницей кинжала из драконьего стекла — это один из двух материалов, способных убить Белого ходока."/>
+
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+
+        <TextBox Name="NorthCityName" HorizontalAlignment="Left" Height="23" Margin="79,48,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="TargarianName" HorizontalAlignment="Left" Height="23" Margin="255,48,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="NameOfThrone" HorizontalAlignment="Left" Height="23" Margin="439,44,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="KinghName" HorizontalAlignment="Left" Height="23" Margin="624,44,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="WeatherName" HorizontalAlignment="Left" Height="23" Margin="79,92,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label Content="Город" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Height="33" FontWeight="Bold"/>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="214,44,0,0" VerticalAlignment="Top" Height="33" FontWeight="Bold"/>
+        <Label Content="Престол" HorizontalAlignment="Left" Margin="375,44,0,0" VerticalAlignment="Top" Height="27" FontWeight="Bold"/>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="583,38,0,0" VerticalAlignment="Top" Height="29" FontWeight="Bold"/>
+        <Label Content="Время года" HorizontalAlignment="Left" Margin="2,82,0,0" VerticalAlignment="Top" Height="33" FontWeight="Bold"/>
+
+
+        <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="392,120,31,258" Height="41" Width="369">
+            <Button x:Name="Print" Content="Печать" Width="100" Height="25" Margin="1,8" Click="Print_Click"/>
+            <Button x:Name="Exit" Content="Выход из программы" Width="150" Height="25" Margin="100 0 0 1" Click="Exit_Click"/>
+        </StackPanel>
+        <MediaElement Name="soundbehind" LoadedBehavior="Manual" Visibility="Hidden"/>
+    </Grid>
+
+
+
+
+</Window>
